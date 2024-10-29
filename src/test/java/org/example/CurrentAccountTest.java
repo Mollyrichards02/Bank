@@ -7,14 +7,14 @@ public class CurrentAccountTest {
 
     @Test
     public void testWithdrawWithinLimit() {
-        CurrentAccount account = new CurrentAccount("John Doe", 500, 100, 200);
+        CurrentAccount account = new CurrentAccount("Molly", 500, 100, 200);
         account.withdraw(100);
         assertEquals(400, account.getBalance());
     }
 
     @Test
     public void testWithdrawExceedsLimit() {
-        CurrentAccount account = new CurrentAccount("John Doe", 500, 100, 200);
+        CurrentAccount account = new CurrentAccount("Molly", 500, 100, 200);
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             account.withdraw(300);
         });

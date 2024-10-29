@@ -7,7 +7,7 @@ public class SavingsAccountTest {
 
     @Test
     public void testInterestApplication() {
-        SavingsAccount account = new SavingsAccount("Jane Doe", 1000, 100, 0.05);
+        SavingsAccount account = new SavingsAccount("Molly", 1000, 100, 0.05);
         account.applyInterest();
         assertEquals(1050, account.getBalance());
     }
